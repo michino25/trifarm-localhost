@@ -4,25 +4,13 @@ require_once "modules/db_module.php";
 
 class ModelUser
 {
-    public function getCategoryList()
-    {
-        $result = executeQuery("SELECT * FROM tb_category");
-        $data = array();
-        while ($rows = mysqli_fetch_assoc($result)) {
-            $category = new Category($rows["id"], $rows["name"], $rows["img"]);
-            array_push($data, $category);
-        }
-        return $data;
-    }
-
     function SignUp($username, $password, $fullname)
     {
         executeQuery(
             "INSERT INTO tb_user VALUES( NULL,
             '" . stringSQL($username) . "',
             '" . md5($password) . "',
-            '" . stringSQL($fullname) . "',
-            '" . $password . "'
+            '" . stringSQL($fullname) . "'
             )"
         );
     }

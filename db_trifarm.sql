@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Nov 14, 2022 at 06:54 AM
--- Server version: 10.3.32-MariaDB-cll-lve
--- PHP Version: 7.2.34
+-- Host: 127.0.0.1
+-- Generation Time: Nov 14, 2022 at 04:42 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -328,23 +327,23 @@ CREATE TABLE IF NOT EXISTS `tb_user` (
   `username` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
   `fullname` text COLLATE utf8_unicode_ci NOT NULL,
-  `note` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `tb_user`
 --
 
-INSERT INTO `tb_user` (`id`, `username`, `password`, `fullname`, `note`) VALUES
-(1, 'nntrung25', '25d55ad283aa400af464c76d713c07ad', 'Nguyễn Như Trung', '12345678'),
-(2, 'nhipham16', '649294867b73802f3dcf5de632e73e2e', 'Phạm Hà Mẫn Nhi', 'nhi12345'),
-(3, 'hoaiphuong', '06dc67758e6bd6f8b089aee4a915441e', 'Trần Hoài Phương', 'phuong123'),
-(4, 'trungtin', '6fcfbc1e3aa1599de1121af5e1ac3b9a', 'Đào Phạm Trung Tín', 'tin12345'),
-(5, 'loinguyen', 'cb7c9405957cb4b997938fd25d8d51df', 'Nguyễn Hữu Lợi', 'loi12345'),
-(6, 'dung123456', '749a49a5b456480a75a9e5cd2d78e42b', 'Nguyen Dung', 'dung200402'),
-(7, 'toidicodebay', 'bbb8aae57c104cda40c93843ad5e6db8', 'Đặng Ngọc An Nhiên', '111111111');
+INSERT INTO `tb_user` (`id`, `username`, `password`, `fullname`) VALUES
+(1, 'nntrung25', '25d55ad283aa400af464c76d713c07ad', 'Nguyễn Như Trung'),
+(2, 'nhipham16', '649294867b73802f3dcf5de632e73e2e', 'Phạm Hà Mẫn Nhi'),
+(3, 'hoaiphuong', '06dc67758e6bd6f8b089aee4a915441e', 'Trần Hoài Phương'),
+(4, 'trungtin', '6fcfbc1e3aa1599de1121af5e1ac3b9a', 'Đào Phạm Trung Tín'),
+(5, 'loinguyen', 'cb7c9405957cb4b997938fd25d8d51df', 'Nguyễn Hữu Lợi'),
+(6, 'dung123456', '749a49a5b456480a75a9e5cd2d78e42b', 'Nguyen Dung'),
+(7, 'toidicodebay', 'bbb8aae57c104cda40c93843ad5e6db8', 'Đặng Ngọc An Nhiên'),
+(8, 'thanhtruc', '0c88f7efdffded2bc205502ffa4e67e8', 'Phạm Thanh Trúc');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
