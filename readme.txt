@@ -1,4 +1,4 @@
-Thành viên nhóm 6:
+Thành viên nhóm 7:
 Nguyễn Như Trung
 Đào Phạm Trung Tín
 Đặng Đình Thiên Như Ý
